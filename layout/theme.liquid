@@ -63,5 +63,8 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
+
+    {{ 'mer-reset-styles.css' | asset_url | stylesheet_tag: preload: true }}
+    <script src="{{ 'mer-reset-scripts.js' | asset_url }}" defer="defer"></script>
   </body>
 </html>
